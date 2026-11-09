@@ -23,6 +23,14 @@ function renderLogin() {
 }
 
 describe('login flow', () => {
+  it('exposes the specified test IDs for login controls', () => {
+    renderLogin()
+
+    expect(screen.getByTestId('ex-id-username')).toBeInTheDocument()
+    expect(screen.getByTestId('ex-id-password')).toBeInTheDocument()
+    expect(screen.getByTestId('ex-id-button')).toBeInTheDocument()
+  })
+
   it('rejects empty and overlength credentials with the specified messages', () => {
     expect(validateLogin({ username: '', password: '' })).toEqual({
       username: 'Username invalid',

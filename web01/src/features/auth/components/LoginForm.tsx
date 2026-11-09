@@ -52,6 +52,7 @@ export function LoginForm() {
             <input
               autoComplete="username"
               className={`form-control auth-input${validationErrors.username ? ' is-invalid' : ''}`}
+              data-testid="ex-id-username"
               id="username"
               maxLength={10}
               name="username"
@@ -78,6 +79,7 @@ export function LoginForm() {
             <input
               autoComplete="current-password"
               className={`form-control auth-input${validationErrors.password ? ' is-invalid' : ''}`}
+              data-testid="ex-id-password"
               id="password"
               maxLength={20}
               name="password"
@@ -108,7 +110,7 @@ export function LoginForm() {
 
         {error && <div className="alert auth-alert" role="alert">{error}</div>}
 
-        <button className="btn submit-button" disabled={isLoading} type="submit">
+        <button className="btn submit-button" data-testid="ex-id-button" disabled={isLoading} type="submit">
           <span>{isLoading ? 'Signing in…' : 'Sign in to workspace'}</span>
           {!isLoading && <ArrowRight size={17} aria-hidden="true" />}
           {isLoading && <span className="spinner-border spinner-border-sm" aria-hidden="true" />}
