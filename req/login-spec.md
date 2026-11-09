@@ -41,3 +41,26 @@
     "message": "Error na ja !!"
 }
 ```
+
+## Mapping UI's element with data-testid arrtibite
+|  UI' element | data-testid  |  Type |
+|---|---|---|
+|  Username | ex-id-username  |  Textfield |
+|  Password | ex-id-password  |  Textfield |
+|  Sig in to workspace | ex-id-button |  Button |
+
+
+## Test cases for UI testing
+
+### Test case ID : TC001
+* Case name=Success with login (valid username and password)
+* Tag=login
+
+Steps
+1. Open web to login page http://localhost:5176/
+2. Fillin valid username and password
+3. Redirect to welcome page
+
+Input data
+* username=alex
+* password=demo123
