@@ -13,7 +13,7 @@
 
 ## Input validation
 * username
-  * rule=required, max length 10, [a-zA-Z0-9] 
+  * rule=required, max length 10, [a-zA-Z] 
   * error message = Username invalid
 * password
   * rule=required, max length 20
